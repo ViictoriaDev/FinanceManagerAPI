@@ -1,5 +1,7 @@
 ﻿
-    namespace FinanceManager.Domain.Account
+using FinanceManager.Domain.Users;
+
+namespace FinanceManager.Domain.Accounts
 {
     public class Account : Entity
     {

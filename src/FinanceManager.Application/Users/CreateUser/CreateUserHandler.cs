@@ -1,4 +1,4 @@
-﻿using FinanceManager.Domain.User;
+﻿using FinanceManager.Domain.Users;
 using MediatR;
 
 namespace FinanceManager.Application.Users.CreateUser

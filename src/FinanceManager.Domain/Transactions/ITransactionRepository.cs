@@ -1,6 +1,6 @@
 ﻿using FinanceManager.Domain.Enums;
 
-namespace FinanceManager.Domain.Transaction
+namespace FinanceManager.Domain.Transactions
 {
     public interface ITransactionRepository
     {

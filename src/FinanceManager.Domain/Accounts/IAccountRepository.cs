@@ -1,4 +1,4 @@
-﻿namespace FinanceManager.Domain.Account
+﻿namespace FinanceManager.Domain.Accounts
 {
     public interface IAccountRepository
     {

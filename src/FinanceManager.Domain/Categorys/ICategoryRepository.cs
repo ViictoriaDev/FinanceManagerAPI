@@ -1,4 +1,4 @@
-﻿namespace FinanceManager.Domain.Category
+﻿namespace FinanceManager.Domain.Categorys
 {
     public interface ICategoryRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace FinanceManager.Domain.User
+﻿namespace FinanceManager.Domain.Users
 {
     public class User : Entity
     {
@@ -7,7 +7,8 @@
         public string PasswordHash { get; private set; }
         public bool IsActive { get; private set; }
 
-        public User(string name, string email, string passwordHash, bool isActive)
+        public User() { }
+        public User(string name, string email, string passwordHash)
         {
             Name = name;
             Email = email;

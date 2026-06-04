@@ -1,4 +1,4 @@
-﻿namespace FinanceManager.Domain.User
+﻿namespace FinanceManager.Domain.Users
 {
     public interface IUserRepository
     {

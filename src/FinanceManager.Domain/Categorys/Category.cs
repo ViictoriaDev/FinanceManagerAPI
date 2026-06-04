@@ -1,4 +1,6 @@
-﻿namespace FinanceManager.Domain.Category
+﻿using FinanceManager.Domain.Users;
+
+namespace FinanceManager.Domain.Categorys
 {
     public class Category : Entity
     {

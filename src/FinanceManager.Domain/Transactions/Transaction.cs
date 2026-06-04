@@ -1,6 +1,8 @@
-﻿using FinanceManager.Domain.Enums;
+﻿using FinanceManager.Domain.Accounts;
+using FinanceManager.Domain.Categorys;
+using FinanceManager.Domain.Enums;
 
-namespace FinanceManager.Domain.Transaction
+namespace FinanceManager.Domain.Transactions
 {
     public class Transaction : Entity
     {
