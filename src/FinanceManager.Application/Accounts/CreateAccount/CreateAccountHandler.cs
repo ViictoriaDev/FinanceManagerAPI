@@ -1,7 +1,8 @@
-﻿using FinanceManager.Domain.Accounts;
+﻿using FinanceManager.Application.Transactions.CreateTransaction;
+using FinanceManager.Domain.Accounts;
 using MediatR;
 
-namespace FinanceManager.Application.Account.CreateAccount
+namespace FinanceManager.Application.Accounts.CreateAccount
 {
     public class CreateAccountHandler : IRequestHandler<CreateAccountCommand, CreateAccountResponse>
     {
@@ -14,12 +15,12 @@ namespace FinanceManager.Application.Account.CreateAccount
 
         public async Task<CreateAccountResponse> Handle(CreateAccountCommand request, CancellationToken ct)
         {
-            var existingAccount = await _accountRepository.GetByIdAsync(request.Id);
+            var existingAccount = await _accountRepository.GetByNameAndUserId(request.Name, request.UserId);
 
             if (existingAccount is not null)
-                throw new Exception("Essa conta já existe");
+                throw new Exception("Essa conta já existe para esse usuário");
 
-            var account = new Account(request.Id, request.Name, request.UserId);
+            var account = new Account(request.Name, request.UserId);
 
             await _accountRepository.AddAsync(account);
 

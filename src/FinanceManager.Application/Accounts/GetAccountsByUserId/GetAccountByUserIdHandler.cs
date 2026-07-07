@@ -14,12 +14,14 @@ namespace FinanceManager.Application.Account.GetAccountsByUserId
 
         public async Task<GetAccountByUserIdResponse> Handle(GetAccountByUserIdQuery query, CancellationToken ct)
         {
-            var account = await _accountRepository.GetByUserIdAsync(query.UserId);
+            var accounts = await _accountRepository.GetByUserIdAsync(query.UserId);
 
-            if (account is null)
+            var accountsDto = accounts.Select(a => new AccountDto(a.Id, a.Name, a.UserId));
+            
+            if (accounts is null)
                 throw new KeyNotFoundException("Conta não encontrada");
 
-            return new GetAccountByUserIdResponse();
+            return new GetAccountByUserIdResponse(accountsDto);
         }
     }
 }

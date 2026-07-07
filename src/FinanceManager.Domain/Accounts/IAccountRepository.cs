@@ -3,6 +3,7 @@
     public interface IAccountRepository
     {
         Task<Account?> GetByIdAsync(Guid id);
+        Task<Account?> GetByNameAndUserId(string Name, Guid UserId);
         Task<IEnumerable<Account>> GetAllAsync();
         Task<IEnumerable<Account>> GetByUserIdAsync(Guid userId);
         Task AddAsync(Account account);
