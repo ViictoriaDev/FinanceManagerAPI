@@ -7,7 +7,7 @@ namespace FinanceManager.Domain.Transactions
         Task AddAsync(Transaction transaction);
         Task<Transaction?> GetByIdAsync(Guid id);
         Task<IEnumerable<Transaction>> GetAllAsync();
-        Task<IEnumerable<Transaction>> GetByCategoryAsync(Guid categoryId);
+        Task<IEnumerable<Transaction>> GetByCategoryIdAsync(Guid categoryId);
         Task<IEnumerable<Transaction>> GetByTypeAsync(ETransactionType type);
         Task<IEnumerable<Transaction>> GetByAccountIdAsync(Guid accountId);
         Task UpdateAsync(Transaction transaction);

@@ -3,9 +3,9 @@
     public interface ICategoryRepository
     {
         Task<Category?> GetByIdAsync(Guid id);
-        Task<Category?> GetByNameAndUserId(string Name, Guid UserId);
+        Task<Category?> GetByNameAndUserIdAsync(string Name, Guid UserId);
         Task<IEnumerable<Category>> GetAllAsync();
-        Task<IEnumerable<Category>> GetByUserId(Guid id);
+        Task<IEnumerable<Category>> GetByUserIdAsync(Guid id);
         Task AddAsync(Category category);
         Task UpdateAsync(Category category);
         Task DeleteAsync(Guid id);

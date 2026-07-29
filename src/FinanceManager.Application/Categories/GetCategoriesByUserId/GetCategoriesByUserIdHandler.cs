@@ -14,7 +14,7 @@ namespace FinanceManager.Application.Categories.GetCategoriesByUserId
 
         public async Task<GetCategoriesByUserIdResponse> Handle(GetCategoriesByUserIdQuery query, CancellationToken ct)
         {
-            var categories = await _categoryRepository.GetByUserId(query.UserId);
+            var categories = await _categoryRepository.GetByUserIdAsync(query.UserId);
 
             var categoriesDto = categories.Select(c => new CategoriesByUserIdDto(c.Id, c.Name, c.UserId));
 
